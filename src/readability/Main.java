@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String targetString = sc.nextLine();
-        if (targetString.length() > 100) {
-            System.out.println("HARD");
-        } else {
-            System.out.println("EASY");
-        }
+       Scanner sc = new Scanner(System.in);
+       TextDocument doc = new TextDocument(sc.nextLine());
+       System.out.println(doc.readabilityLevel());
+       System.out.println(doc.automatedReadabilityScore());
+
+
+
     }
 }
