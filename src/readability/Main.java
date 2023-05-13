@@ -16,6 +16,7 @@ public class Main {
         try {
             TextDocument doc = new TextDocument(readFileAsString(pathToFile));
             doc.readabilityLevel();
+            //System.out.println(doc.getTokens("\\b\\d+,\\d+\\b"));
         } catch (IOException e) {
             System.out.println("Cannot read file: " + e.getMessage());
         }

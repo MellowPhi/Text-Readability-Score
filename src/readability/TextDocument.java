@@ -16,7 +16,8 @@ public class TextDocument extends Document
 
     @Override
     public int getNumWords() {
-        List<String> tokens = getTokens("[^ .,!?]+");
+        // List<String> tokens = getTokens("[^ .,!?]+");
+        List<String> tokens = getTokens("\\b\\d+,\\d+\\b|\\b\\w+\\b");
         return tokens.size();
     }
 
