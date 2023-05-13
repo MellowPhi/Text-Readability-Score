@@ -39,6 +39,17 @@ public abstract class Document {
                 + 0.5 * getNumWords() / getNumSentences() - 21.43;
     }
 
+    protected String readingLevel(int readScore) {
+        int ageLow = readScore + 4;
+        int ageHigh;
+        if (readScore < 14) {
+            ageHigh = ageLow + 1;
+        } else {
+            ageHigh = ageLow + 4;
+        }
+        return new String(ageLow + "-" + ageHigh);
+    }
+
     /**
      * @return Return the entire document text
      */

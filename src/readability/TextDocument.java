@@ -31,18 +31,20 @@ public class TextDocument extends Document
         return 0;
     }
 
-    public String readabilityLevel() {
+    public void readabilityLevel() {
         int numSentences = this.getNumSentences();
         int numWords = this.getNumWords();
         int numChars = this.getNumChars();
-        System.out.println(numWords);
-        System.out.println(numSentences);
-        System.out.println(numChars);
+        System.out.println("Words: " + numWords);
+        System.out.println("Sentences: " + numSentences);
+        System.out.println("Characters: " + numChars);
+        System.out.println("The score is: " + String.format("%.2f", this.automatedReadabilityScore()));
+        System.out.println("This text should be understood by " + this.readingLevel((int) Math.ceil(this.automatedReadabilityScore())) +" year-olds.");
         double avgWords = numWords / (double) numSentences;
-        if (avgWords <= 10) {
-            return "EASY";
-        } else {
-            return "HARD";
-        }
+//        if (avgWords <= 10) {
+//            return "EASY";
+//        } else {
+//            return "HARD";
+//        }
     }
 }
