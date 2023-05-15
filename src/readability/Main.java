@@ -10,13 +10,19 @@ public class Main {
     }
     public static void main(String[] args) {
         // Pass the command line argument to this variable
-        String pathToFile = args[0];
-        System.out.println(pathToFile);
+        // String pathToFile = args[0];
+        String pathToFile = "/Users/omslaww/Readability Score (Java)/Readability Score (Java)/task/src/readability/in.txt";
+        // System.out.println(pathToFile);
+//        String pathToFile = "142,262";
+//        TextDocument doc = new TextDocument(pathToFile);
+//        System.out.println(doc.getTokens("\\b\\d+,\\d+\\b|\\b\\w+\\b"));
+//        System.out.println(doc.getNumSyllables());
 
         try {
             TextDocument doc = new TextDocument(readFileAsString(pathToFile));
             doc.readabilityLevel();
-            //System.out.println(doc.getTokens("\\b\\d+,\\d+\\b"));
+            System.out.println(doc.getTokens("\\b\\w+\\b").size());
+            System.out.println(doc.getTokens("\\b\\d+,\\d+|\\b\\w+\\b").size());
         } catch (IOException e) {
             System.out.println("Cannot read file: " + e.getMessage());
         }
