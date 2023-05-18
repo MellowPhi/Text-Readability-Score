@@ -2,6 +2,10 @@ package readability;
 
 import java.util.List;
 
+/**
+ * @author Om Thapa
+ *
+ */
 public class TextDocument extends Document
 {
     public TextDocument(String text) {

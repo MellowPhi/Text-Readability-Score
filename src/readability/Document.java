@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @author Om Thapa
+ */
 public abstract class Document {
     private String text;
 
