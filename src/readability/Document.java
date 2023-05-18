@@ -111,18 +111,21 @@ public abstract class Document {
     }
 
     protected double smogScore() {
-        return 1.042 * Math.sqrt(getNumSyllables()[1] * 30 / getNumSentences()) + 3.1291;
+        return 1.042 * Math.sqrt(getNumSyllables()[1] * 30 / (double)getNumSentences()) + 3.1291;
     }
 
-    protected String readingLevel(int readScore) {
-        int ageLow = readScore + 4;
-        int ageHigh;
-        if (readScore < 14) {
-            ageHigh = ageLow + 1;
+    protected double colemanLiauScore() {
+        return 0.0588 *(getNumChars() / (double) getNumWords() * 100) - 0.296 * (getNumSentences() / (double) getNumWords() * 100)-15.8;
+    }
+
+    protected int readingLevel(int readScore) {
+        int age = 0;
+        if (readScore < 14){
+            age = readScore + 5;
         } else {
-            ageHigh = ageLow + 4;
+            age = readScore + 8;
         }
-        return new String(ageLow + "-" + ageHigh);
+        return age;
     }
 
     /**
