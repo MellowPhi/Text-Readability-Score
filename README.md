@@ -36,9 +36,20 @@ You can also import to an IDE of your choice. I recommend IntelliJ
 ## Usage
 This project generates a readability score based 
 - [Flesch–Kincaid readability](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests)
+**Flesch-kincaid formula**
+$$FKscore= 0.39 × \frac{words}{sentences} + 11.8 × \frac{syllables}{words} - 15.59$$
 - [Automated readability index (ARI)](https://en.wikipedia.org/wiki/Automated_readability_index)
+**Automated readability index(ARI)**
+$$ARIscore= 4.71 × \frac{characters}{words} + 0.5 × \frac{words}{sentences} - 21.43$$
 - [Simple Measure of Gobbledygook (SMOG index)](https://en.wikipedia.org/wiki/SMOG)
+**Simple measures of Gobbledygook (SMOG) formula**
+$$ARIscore= 1.043 × \sqrt{polysyllables × \frac{30}{sentences}} + 3.1291$$
 - [Coleman–Liau index](https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index)
+**Coleman-Liau formula**
+$$ColemanScore = 0.0588 * L - 0.296 * S - 15.8 $$
+where $L = \frac{Letters}{Words} × 100$ and $S=\frac{Sentences}{Words} × 100 $
+
+
 
 This gives an idea on how difficult a text is read. 
 
