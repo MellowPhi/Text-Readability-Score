@@ -1,31 +1,66 @@
 # Text-Readability-Score
 
-Generates a readability score based 
+## Get started
+### Requirements
+
+Version required on your local machine to run this project.
+- Java 17
+- Gradle 7.2
+
+1. Clone the repo
+
+```shell
+git clone git@github.com:MellowPhi/text-readability-score.git
+```
+
+2. Build the project
+
+```shell
+./gradlew build
+```
+
+3. Run the project
+
+```shell
+./gradlew run
+```
+Note: If you would like to pass in your own text file i.e `frankenstein.txt`. Place the target text file inside
+the app module. Run the `gradlew run` with `P` flag as shown below. 
+
+```shell
+./gradlew run -PfilePath=./frankenstein.txt
+```
+
+You can also import to an IDE of your choice. I recommend IntelliJ
+
+## Usage
+This project generates a readability score based 
 - [Flesch–Kincaid readability](https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests)
 - [Automated readability index (ARI)](https://en.wikipedia.org/wiki/Automated_readability_index)
 - [Simple Measure of Gobbledygook (SMOG index)](https://en.wikipedia.org/wiki/SMOG)
+- [Coleman–Liau index](https://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_index)
 
 This gives an idea on how difficult a text is read. 
 
 
-Example output of running this program on a text file `in.txt`
+Example output of running this program on a text file `frankenstein.txt`
 ```
-Generating the readability score for: 
-Readability is the ease with which a reader can understand a written text.
-In natural language, the readability of text depends on its content and its presentation.Researchers have used various factors to measure readability.
-Readability is more than simply legibility, which is a measure of how easily a reader can distinguish individual letters or characters from each other.Higher readability eases reading effort and speed for any reader, but it is especially important for those who do not have high reading comprehension.
-In readers with poor reading comprehension, raising the readability level of a text from mediocre to good can make the difference between success and failure
+The text is: 
+He struggled violently. ‘Let me go,’ he cried; ‘monster! Ugly wretch! You wish to eat me and tear me to pieces. You are an ogre. Let me go, or I will tell my papa.’
+‘Boy, you will never see your father again; you must come with me.’
+‘Hideous monster! Let me go. My papa is a syndic—he is M. Frankenstein—he will punish you. You dare not keep me.’
+‘Frankenstein! you belong then to my enemy—to him towards whom I have sworn eternal revenge; you shall be my first victim.’
+The child still struggled and loaded me with epithets which carried despair to my heart; I grasped his throat to silence him, and in a moment he lay dead at my feet.
 
-Words: 108
-Sentences: 6
-Characters: 580
-Syllables: 196
-Polysyllables: 20
-Automated Readability Index: 12.86
-Flesch–Kincaid readability tests: 12.84
-Simple Measure of Gobbledygook: 13.55
-This text should be understood by 17-18 year-olds.
-
-
-
+Words: 124
+Sentences: 15
+Characters: 516
+Syllables: 159
+Polysyllables: 6
+Enter the score you want to calculate (ARI, FK, SMOG, CL, all):
+>> all
+Automated Readability Index: 2.30 (about 8-year-olds).
+Flesch–Kincaid readability tests: 2.76 (about 8-year-olds).
+Simple Measure of Gobbledygook: 6.74 (about 12-year-olds).
+Coleman–Liau index: 5.09 (about 11-year-olds).
 ```
