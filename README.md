@@ -10,7 +10,7 @@ Version required on your local machine to run this project.
 1. Clone the repo
 
 ```shell
-git clone git@github.com:MellowPhi/text-readability-score.git
+git clone https://github.com/MellowPhi/text-readability-score.git
 ```
 
 2. Build the project
