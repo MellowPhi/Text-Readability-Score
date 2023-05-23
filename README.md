@@ -51,11 +51,12 @@ where $L = \frac{Letters}{Words} × 100$ and $S=\frac{Sentences}{Words} × 100 $
 
 
 
-This gives an idea on how difficult a text is read. 
+This gives an idea on how difficult a text is read.
+
 
 
 Example output of running this program on a text file `frankenstein.txt`
-```
+```shell
 The text is: 
 He struggled violently. ‘Let me go,’ he cried; ‘monster! Ugly wretch! You wish to eat me and tear me to pieces. You are an ogre. Let me go, or I will tell my papa.’
 ‘Boy, you will never see your father again; you must come with me.’
@@ -69,7 +70,7 @@ Characters: 516
 Syllables: 159
 Polysyllables: 6
 Enter the score you want to calculate (ARI, FK, SMOG, CL, all):
->> all
+> all
 Automated Readability Index: 2.30 (about 8-year-olds).
 Flesch–Kincaid readability tests: 2.76 (about 8-year-olds).
 Simple Measure of Gobbledygook: 6.74 (about 12-year-olds).
